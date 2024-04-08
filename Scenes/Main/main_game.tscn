@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://4s73vt8ybu7v"]
+
+[ext_resource type="Script" path="res://Scripts/Main/main_game.gd" id="1_5u7vi"]
+[ext_resource type="PackedScene" uid="uid://ux3ek7pess5u" path="res://Scenes/Game 1/G1Main.tscn" id="1_negoy"]
+[ext_resource type="PackedScene" uid="uid://p51e4vgw0tll" path="res://Scenes/Game 4/G4Main.tscn" id="3_xat4q"]
+
+[node name="MainGame" type="Node"]
+script = ExtResource("1_5u7vi")
+
+[node name="G1Main" parent="." instance=ExtResource("1_negoy")]
+
+[node name="G4Main" parent="." instance=ExtResource("3_xat4q")]

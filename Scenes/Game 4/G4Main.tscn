@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://p51e4vgw0tll"]
+
+[ext_resource type="Script" path="res://Scripts/Game 4/G4Main.gd" id="1_0c7nd"]
+[ext_resource type="PackedScene" uid="uid://brh4r2b208v1d" path="res://Scenes/Game 4/G4BG.tscn" id="1_14lf5"]
+[ext_resource type="PackedScene" uid="uid://brn7euftqo2na" path="res://Scenes/Game 4/G4Gr.tscn" id="2_57kji"]
+[ext_resource type="PackedScene" uid="uid://cfwtsxibhhkxt" path="res://Scenes/Game 4/G4Character.tscn" id="3_0olv2"]
+[ext_resource type="PackedScene" uid="uid://d4hw3y33afryi" path="res://Scenes/GameOver.tscn" id="5_l8plm"]
+
+[node name="G4Main" type="Node"]
+script = ExtResource("1_0c7nd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="Background" parent="." instance=ExtResource("1_14lf5")]
+
+[node name="Ground" parent="." instance=ExtResource("2_57kji")]
+
+[node name="Dinosaur" parent="." instance=ExtResource("3_0olv2")]
+position = Vector2(174, 370)
+scale = Vector2(7, 7)
+
+[node name="Game Over" parent="." instance=ExtResource("5_l8plm")]
+process_mode = 2
+
+[connection signal="restart" from="Game Over" to="." method="_on_game_over_restart"]

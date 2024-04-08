@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://brh4r2b208v1d"]
+
+[ext_resource type="Texture2D" uid="uid://31wbskwi5hsr" path="res://Assets/Jungle Asset Pack/parallax background/plx-1.png" id="1_25lfr"]
+[ext_resource type="Texture2D" uid="uid://btaa58hq3xwnw" path="res://Assets/Jungle Asset Pack/parallax background/plx-2.png" id="2_tuixm"]
+[ext_resource type="Texture2D" uid="uid://cvd3b1snjbhhf" path="res://Assets/Jungle Asset Pack/parallax background/plx-3.png" id="3_mapra"]
+[ext_resource type="Texture2D" uid="uid://d4jffgajt7lpe" path="res://Assets/Jungle Asset Pack/parallax background/plx-4.png" id="4_phgqu"]
+[ext_resource type="Texture2D" uid="uid://cy4jtl2n2xacv" path="res://Assets/Jungle Asset Pack/parallax background/plx-5.png" id="5_5vguu"]
+
+[node name="Background" type="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3.0651, 3.06944)
+texture = ExtResource("1_25lfr")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+scale = Vector2(3.00781, 3.00926)
+texture = ExtResource("2_tuixm")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+scale = Vector2(3.00781, 3.00926)
+texture = ExtResource("3_mapra")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+scale = Vector2(3.00781, 3.00926)
+texture = ExtResource("4_phgqu")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+scale = Vector2(3.00781, 3.00926)
+texture = ExtResource("5_5vguu")
+centered = false

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6f4tbrmnuou7"]
+
+[ext_resource type="Texture2D" uid="uid://cg7uyyjgx2j4r" path="res://Assets/PNG/flappyBird.png" id="1_0uldv"]
+[ext_resource type="Script" path="res://Scripts/Game 4/G4Bird.gd" id="1_km0vm"]
+
+[node name="Bird" type="Area2D"]
+script = ExtResource("1_km0vm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_0uldv")
+flip_h = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.2, 0.2)
+polygon = PackedVector2Array(-93, -196, -94.9, -169, -121.8, -169, -125, -165.8, -125, -139, -151.8, -139, -155, -135.8, -155, -109, -181.8, -109, -185, -105.8, -185, -18, -213, -18, -213, -15, -214.9, 11, -241.8, 11, -245, 14.2, -245, 46, -242.1, 46, -215, 47.9, -215, 134.8, -211.8, 138, -64.9, 138, -62.9, 169, 60.9, 169, 62.9, 139, 121, 139, 121, 136, 122.9, 109, 148.8, 109, 152, 105.8, 152, 79, 210, 79, 210, 76, 211.9, 49, 238.8, 49, 242, 45.8, 242, 18, 269.8, 18, 273, 14.8, 273, -77, 270.1, -77, 243, -78.9, 243, -105.8, 239.8, -109, 182, -109, 182, -136.9, 153, -138.9, 153, -165.8, 149.8, -169, 93, -169, 93, -196.2, 91, -197.2, 91, -199, -93, -199)

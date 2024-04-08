@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjkplofv3ff0u"]
+
+[ext_resource type="Script" path="res://Scripts/Game 1/G1Sphere.gd" id="1_71ijd"]
+[ext_resource type="Texture2D" uid="uid://c3qsabs56uc4m" path="res://Assets/PNG/pixelCircle.png" id="1_pueoq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_22jh3"]
+radius = 12.1655
+
+[node name="RigidBody2D" type="RigidBody2D"]
+can_sleep = false
+script = ExtResource("1_71ijd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, 1)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_pueoq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_22jh3")

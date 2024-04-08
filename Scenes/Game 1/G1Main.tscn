@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://ux3ek7pess5u"]
+
+[ext_resource type="Script" path="res://Scripts/Game 1/G1Main.gd" id="1_5d018"]
+[ext_resource type="PackedScene" uid="uid://cjkplofv3ff0u" path="res://Scenes/Game 1/G1Sphere.tscn" id="1_asx6a"]
+[ext_resource type="PackedScene" uid="uid://b82k5nfycrga" path="res://Scenes/Game 1/G1Stick.tscn" id="2_duavx"]
+[ext_resource type="PackedScene" uid="uid://brn7euftqo2na" path="res://Scenes/Game 4/G4Gr.tscn" id="3_mor5l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ti558"]
+bg_color = Color(1, 0.294118, 0.537255, 1)
+
+[node name="G1Main" type="Node"]
+script = ExtResource("1_5d018")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 326)
+
+[node name="Background" type="Panel" parent="."]
+offset_left = -14.0
+offset_top = -17.0
+offset_right = 1176.0
+offset_bottom = 676.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ti558")
+
+[node name="Sphere" parent="." instance=ExtResource("1_asx6a")]
+position = Vector2(566, 297)
+
+[node name="Stick" parent="." instance=ExtResource("2_duavx")]
+position = Vector2(574, 410)
+rotation = 0.0349066
+scale = Vector2(2, 2)
+
+[node name="Ground" parent="." instance=ExtResource("3_mor5l")]
+visible = false
+visibility_layer = 2
+position = Vector2(-8, 766)
